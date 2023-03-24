@@ -11,8 +11,6 @@ struct always_false : std::false_type {};
 template<class T>
 inline constexpr bool always_false_v = always_false<T>::value;
 
-
-
 class Config {
 public:
     template<typename T>
@@ -47,7 +45,7 @@ public:
             if (pos != std::string::npos) {
                 std::string key = line.substr( 0, pos );
                 std::string value = line.substr( pos + 1 );
-                // Remove leading and trailing whitespaces from key and value strings
+             
                 key.erase( 0, key.find_first_not_of( " \t" ) );
                 key.erase( key.find_last_not_of( " \t" ) + 1 );
                 value.erase( 0, value.find_first_not_of( " \t" ) );
