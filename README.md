@@ -55,7 +55,7 @@ int height = loadedWindow.Get<int>("height");
 
 ## Supported Types
 
-This library supports the following types for configuration values: `bool`, `int`, `float`, `double`, std::string, char, and `unsigned long long int`. Any other types will result in a compile-time error.
+This library supports the following types for configuration values: `bool`, `int`, `float`, `double`, `std::string`, `char`, and `unsigned long long int`. Any other types will result in a compile-time error.
 
 ## Contributing
 
