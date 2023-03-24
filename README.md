@@ -11,9 +11,7 @@ To use this library, simply include the "config.hpp" header file and create a Co
 #include "config.hpp"
 
 int main()
-
 {
-
     Config config;
 
     config.Set("window.title", "My App");
