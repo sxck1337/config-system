@@ -17,23 +17,16 @@ int main()
     Config config;
 
     config.Set("window.title", "My App");
-
     config.Set("window.width", 800);
-
     config.Set("window.height", 600);
 
     config.SaveToFile("config.txt");
 
     Config loadedConfig;
-
     loadedConfig.LoadFromFile("config.txt");
-
     std::string title = loadedConfig.Get<std::string>("window.title");
-
     int width = loadedConfig.Get<int>("window.width");
-
     int height = loadedConfig.Get<int>("window.height");
-
 }
 
 ```
@@ -47,25 +40,17 @@ You can also use subcategories to organize your configuration values. To create 
 Config config;
 
 auto window = config.GetSubcategory("window");
-
 window.Set("title", "My App");
-
 window.Set("width", 800);
-
 window.Set("height", 600);
 
 config.SaveToFile("config.txt");
 
 Config loadedConfig;
-
 loadedConfig.LoadFromFile("config.txt");
-
 auto loadedWindow = loadedConfig.GetSubcategory("window");
-
 std::string title = loadedWindow.Get<std::string>("title");
-
 int width = loadedWindow.Get<int>("width");
-
 int height = loadedWindow.Get<int>("height");
 
 ```
