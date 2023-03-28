@@ -19,8 +19,11 @@ public:
     }
 
     template<typename T>
-    T Get( const std::string& key ) const {
-        return values_.at( key ).GetValue<T>( );
+    T Get(const std::string& key) const {
+        if (values_.count(key) == 0) {
+            Set(key, T{});
+        }
+        return values_.at(key).GetValue<T>();
     }
 
     void SaveToFile( const std::string& filename ) const {
