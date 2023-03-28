@@ -4,7 +4,7 @@ This is a simple one header-only C++ Config System library that provides a way t
 
 ## Usage
 
-To use this library, simply include the "config.hpp" header file and create a Config object. Then, you can use the `Set()` and `Get()` member functions to store and retrieve configuration values, respectively. For example:
+To use this library, simply include the "config.hpp" header file and create a Config object. Then, you can use the `Set()` and `Get()` member functions to store and retrieve configuration values, respectively. The `Get()` function now also creates the value if it didn't find it. For example:
 
 ```c++
 
